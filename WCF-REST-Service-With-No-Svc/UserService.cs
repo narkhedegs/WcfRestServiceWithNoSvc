@@ -1,19 +1,15 @@
-﻿using System.ComponentModel;
-using System.ServiceModel;
-using System.ServiceModel.Activation;
+﻿using System.ServiceModel;
 using System.ServiceModel.Web;
 using WCF_REST_Service_With_No_Svc.Models;
 
 namespace WCF_REST_Service_With_No_Svc
 {
     [ServiceContract]
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
-    public class DataService
+    public class UserService
     {
-        [WebGet(UriTemplate = "/Data", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
-        [Description("This API call returns some Data.")]
-        public virtual User GetData()
+        [WebGet(UriTemplate = "/Users/{UserId}", ResponseFormat = WebMessageFormat.Json,
+            RequestFormat = WebMessageFormat.Json)]
+        public User Get(string userId)
         {
             return new User
             {
@@ -26,10 +22,9 @@ namespace WCF_REST_Service_With_No_Svc
             };
         }
 
-        [WebInvoke(UriTemplate = "/Data", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json,
+        [WebInvoke(UriTemplate = "/Users", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json,
             Method = "POST")]
-        [Description("This API call posts some data to server.")]
-        public virtual string PostData(User user)
+        public string Post(User user)
         {
             return
                 string.Format(
