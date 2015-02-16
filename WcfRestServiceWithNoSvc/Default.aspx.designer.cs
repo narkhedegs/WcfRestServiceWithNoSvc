@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WCF_REST_Service_With_No_Svc
+namespace WcfRestServiceWithNoSvc
 {
 
 

@@ -4,7 +4,7 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 
-namespace WCF_REST_Service_With_No_Svc
+namespace WcfRestServiceWithNoSvc
 {
     public class HttpsOnlyWebServiceHostFactory : WebServiceHostFactory
     {

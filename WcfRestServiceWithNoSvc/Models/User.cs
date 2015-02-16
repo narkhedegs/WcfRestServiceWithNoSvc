@@ -1,4 +1,4 @@
-﻿namespace WCF_REST_Service_With_No_Svc.Models
+﻿namespace WcfRestServiceWithNoSvc.Models
 {
     public class User
     {

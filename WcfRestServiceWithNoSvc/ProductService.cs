@@ -1,8 +1,8 @@
 ﻿using System.ServiceModel;
 using System.ServiceModel.Web;
-using WCF_REST_Service_With_No_Svc.Models;
+using WcfRestServiceWithNoSvc.Models;
 
-namespace WCF_REST_Service_With_No_Svc
+namespace WcfRestServiceWithNoSvc
 {
     [ServiceContract]
     public class ProductService

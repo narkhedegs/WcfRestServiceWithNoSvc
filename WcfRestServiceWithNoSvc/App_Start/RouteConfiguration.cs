@@ -1,7 +1,7 @@
 ﻿using System.ServiceModel.Activation;
 using System.Web.Routing;
 
-namespace WCF_REST_Service_With_No_Svc.App_Start
+namespace WcfRestServiceWithNoSvc.App_Start
 {
     public class RouteConfiguration
     {
